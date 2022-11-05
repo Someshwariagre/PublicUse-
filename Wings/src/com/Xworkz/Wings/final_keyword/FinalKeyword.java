@@ -6,8 +6,8 @@ public class FinalKeyword {
 		System.out.println(fk.add());
 	}
 	int add() {
- final int a=10;
- final int b=20;
-   return a+b;
+ final int A=10;
+ final int B=20;
+   return A+B;
 	}     
 }

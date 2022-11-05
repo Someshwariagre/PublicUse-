@@ -7,6 +7,9 @@ public class Medicine {
 
 	Medicine(){
 		System.out.println("I am default constructor");
+		name = "vicks";
+		price = 34.09;
+		dose = "20ml";
 	}
 	Medicine(String name, double price, String dose){
 		System.out.println("I am parameterized constructor");

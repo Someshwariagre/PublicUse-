@@ -2,15 +2,19 @@ package com.Xworkz.Wings.final_keyword;
 
 public class FinalKWC {
 	 int add(){
-		 final int a = 10;
-		 final int b = 20;
-		 return a+b;
+		 final int A = 30;
+		 final int B = 40;
+		 return A+B;
+	
+	
 	 }
-	 FinalKWC(){
-		 int a = 30;
-		 int b = 40;
+          FinalKWC(){
+		final int A = 50;
+		final int B = 60;
+		 
 	 }
-
+        
+      	 
 	 
 	 public static void main(String[] args) {
 		 FinalKWC fk = new FinalKWC();
