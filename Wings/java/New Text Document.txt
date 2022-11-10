@@ -1,0 +1,15 @@
+class PalindromeString{
+   String a = "madam"
+   String rev = " ":
+    for (int i=s.length()-1; i>=0; i--){
+
+      rev = rev+s.charAt(i);
+}
+
+if(s.euals(rev)){
+ System.out.println("This is palindrome");
+}
+else  {
+System.out.println("This is not palindrome");
+}
+}
