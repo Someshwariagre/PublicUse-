@@ -11,6 +11,6 @@ public class Animal {
 		
 	}
 	public String toString() {
-		return getClass().getName()+"@"+Integer.toHexString(hashCode());
+		return "Animal [name=" + name + ", type=" + type + "]";
 	}
 }

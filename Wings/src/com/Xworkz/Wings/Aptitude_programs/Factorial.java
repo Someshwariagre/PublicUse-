@@ -7,10 +7,10 @@ public class Factorial {
 		Scanner scr = new Scanner(System.in);
 		System.out.println("Enter the number");
 		
-		int num = 1;
-		while (num > 0) {
-			int a= scr.nextInt();
-			int number =a;
+		
+		while (true) {
+			int a = scr.nextInt();
+			int number=a;
 			int fact = 1;
 
 			for (int i = 1; i <= number; i++) {

@@ -10,9 +10,9 @@ public class AmstrongNumber {
 		int num = 1;
 		while (num > 0) {
 
-			int temp1 = scr.nextInt();
+			int no = scr.nextInt();
    
-		int no = temp1;
+		
 		int t1 = no;
 		int length = 0;
 		int rem;
