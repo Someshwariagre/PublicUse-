@@ -1,3 +1,5 @@
+package com.Xworkz.Wings.Aptitude_programs;
+
 class Pluspattern{
 
 public static void main (String Args[]){
