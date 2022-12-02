@@ -1,3 +1,5 @@
+package com.Xworkz.Wings.Aptitude_programs;
+
 class Starpattern3{
 
 public static void main (String Args[]){

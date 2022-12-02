@@ -1,3 +1,5 @@
+package com.Xworkz.Wings.Aptitude_programs;
+
 class Forlooppattern3{
 
 public static void main (String Args[]){

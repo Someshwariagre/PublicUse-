@@ -1,4 +1,6 @@
-class Starpattern1{
+package com.Xworkz.Wings.Aptitude_programs;
+
+class Starpattern4{
 
 public static void main (String Args[]){
 
