@@ -4,20 +4,19 @@ public class StudentDetails {
 String name;
 String batchNumber;
 String qualification;
-String trainerName;
 
-StudentDetails(String name, String batchNumber,String qualification,String trainerName){
+
+StudentDetails(String name, String batchNumber,String qualification ){
 	this.name= name;
 	this.batchNumber=batchNumber;
 	this.qualification=qualification;
-	this.trainerName=trainerName;
+	
 	
 }
 
+
 @Override
 public String toString() {
-	return "StudentDetails [name=" + name + ", batchNumber=" + batchNumber + ", qualification=" + qualification
-			+ ", trainerName=" + trainerName + "]";
+	return "StudentDetails [name=" + name + ", batchNumber=" + batchNumber + ", qualification=" + qualification + "]";
 }
-
 }
