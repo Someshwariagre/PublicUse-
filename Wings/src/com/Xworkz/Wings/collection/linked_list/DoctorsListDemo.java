@@ -48,10 +48,12 @@ public class DoctorsListDemo {
 	hospitalList.add(MRMC);
 	
 	
+	
+	
 	ListIterator<Hospital> itr = hospitalList.listIterator();
 	
 	for(Hospital h : hospitalList) {
-  if (h.doctor.contains("Pediatration"));
+  if (h.doctor.equals("Pediatrition"));
   System.out.println(h);
 	
 		}
