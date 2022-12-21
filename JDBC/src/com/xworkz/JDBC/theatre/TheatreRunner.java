@@ -7,6 +7,7 @@ public class TheatreRunner {
 		
 	
 TheatreService theatreservice = new TheatreServiceIMPL();
+TheatreRepository theatrerepository = new TheatreRepositoryIMPL();
 
 TheatreDTO miraz = new TheatreDTO();
 miraz.setTheatreName("Miraz");
@@ -80,7 +81,9 @@ TheatreDTO pvr = new TheatreDTO("PVR","Chikkmanguluru",6,320,300,250,"Ashique2",
 TheatreDTO cinipolis = new TheatreDTO("Cinipolis","Belgaum",4,500,490,400,"Sita Ramam","11:30 AM","Telagu",400);
 TheatreDTO sathyam = new TheatreDTO("Sathyam","Gadag",6,250,240,190,"Vikram Vedam","11:35 AM","Telagu",200);
 
-theatreservice.save(esquare);
+
+theatreservice.save(cinipolis);
+
 
 ArrayList<TheatreDTO> TheatreList = new ArrayList<TheatreDTO>();
 TheatreList.add(esquare);
@@ -99,12 +102,8 @@ TheatreList.add(naratki);
 TheatreList.add(chitra);
 TheatreList.add(miraz);
 
-TheatreDTO th = theatreservice.read(santosh);
-System.out.println("Details of Santosh Theatre:-  " + th );
-
-TheatreDTO th1 = theatreservice.save(bigcinemas);
-System.out.println("Details of Bigcinemas Theatre:-  " + th1 );
-
+System.out.println( "Deatils of chitra theatre:-" + theatreservice.findBy(chitra));
+System.out.println(theatreservice.read(cinipolis));
 
 }
 }

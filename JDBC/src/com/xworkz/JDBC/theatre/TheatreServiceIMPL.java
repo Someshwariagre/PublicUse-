@@ -14,15 +14,27 @@ public class TheatreServiceIMPL implements TheatreService {
 			}
 		return theatreDto;
 	}
+	@Override
+	public TheatreDTO read(TheatreDTO theatreDto) {
+		ArrayList<TheatreDTO> theatres = theatreRepository.read(theatreDto);
+		for(TheatreDTO theatre :theatres) {		
+		//System.out.println(theatre);
+	}
+		return theatreDto;
+
+    }
 	
-		@Override
-		public TheatreDTO read(TheatreDTO theatreDto) {
-			ArrayList<TheatreDTO> theatres = theatreRepository.save(theatreDto);
-			for(TheatreDTO theatre :theatres) {
-		      System.out.println(theatre);
-		    	 
+	@Override
+	public TheatreDTO findBy(TheatreDTO theatreName) {
+		ArrayList<TheatreDTO> TheatreList =  theatreRepository.findBy();
+		for(TheatreDTO t : TheatreList) {
+			System.out.println(t.getLocation());
+		}
+		return theatreName;
+	}
+		
+	
+	
+	    
 }
 
-			return theatreDto;
-		}
-}
