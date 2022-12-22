@@ -121,13 +121,11 @@ theatres.add(miraz);
 }
 
 
-   String th = theatreservice.findBy("Santosh");
-   for (TheatreDTO theatreDTO : dto) {
-	   if(theatreDTO.getTheatreName().equals(th))
-	   System.out.println(theatreDTO);
+  theatreservice.findBy("Naratki");
+
 	   
 }
  
 
 	}
-}
+

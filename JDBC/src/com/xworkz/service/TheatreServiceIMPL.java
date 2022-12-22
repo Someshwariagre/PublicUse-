@@ -22,19 +22,27 @@ public class TheatreServiceIMPL implements TheatreService {
 
 	}
 
-	public String findBy(String theatreName) {
-		ArrayList<TheatreDTO> theatres = theatreRepository.read();
-		if (theatres != null)
-//			for (TheatreDTO theatreDTO : theatres) {
-//				if (theatreDTO.getTheatreName().equals(theatres)) {
-//					System.out.println(theatreDTO);
-//
-//				}
-				return theatreName;
+	public TheatreDTO findBy(String TheatreName) {
+		 ArrayList<TheatreDTO> list=theatreRepository.read();
+		 for(TheatreDTO th:list) {
+			 if(th.getTheatreName().equals(TheatreName)) {
+					System.out.println(th);
+					
+				 }
+			 
+			 }
+		return null;	
+}
 
-			
-		return null;
+
+//	@Override
+//	public TheatreDTO updateByIndex(int index) {
+//		TheatreDTO list=theatreRepository.updateByIndex(index);
+//		if(list.getTheatreName().length()>=0) {
+//			System.out.println("Condition matched");
+//		if(list.getTheatreName().equals(list));
+//		return null;
+//	}
+//		return list;
 
 	}
-
-}

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.xworkz.theatre.TheatreDTO;
 public interface TheatreRepository {
 	   ArrayList<TheatreDTO> save(TheatreDTO theatreDto);
-       String findBy(String theatreName);
-		ArrayList<TheatreDTO> read();
+	   ArrayList<TheatreDTO> findBy(String theatreName);
+	   ArrayList<TheatreDTO> read();
+	  // TheatreDTO updateByIndex(int index);
 }

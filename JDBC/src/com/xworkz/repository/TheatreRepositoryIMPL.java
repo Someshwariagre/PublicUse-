@@ -20,8 +20,9 @@ public class TheatreRepositoryIMPL implements TheatreRepository {
 	}
 
 	@Override
-	public String findBy(String theatreName) {
-		return theatreName;
+	public ArrayList<TheatreDTO> findBy(String theatreName) {
+		return theatre;
 	}
+
 
 }
