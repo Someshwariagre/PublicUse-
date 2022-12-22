@@ -1,4 +1,4 @@
-package com.xworkz.JDBC.theatre;
+package com.xworkz.theatre;
 
 public class TheatreDTO {
 	private String theatreName;
@@ -97,5 +97,5 @@ public class TheatreDTO {
 				+ ", noOfPeople=" + noOfPeople + "]";
 	}
 
-	
+
 }

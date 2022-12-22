@@ -1,13 +1,14 @@
-package com.xworkz.JDBC.theatre;
+package com.xworkz.theatre;
 
 import java.util.ArrayList;
+
+import com.xworkz.service.TheatreService;
+import com.xworkz.service.TheatreServiceIMPL;
 
 public class TheatreRunner {
 	public static void main(String[] args) {
 		
-	
 TheatreService theatreservice = new TheatreServiceIMPL();
-TheatreRepository theatrerepository = new TheatreRepositoryIMPL();
 
 TheatreDTO miraz = new TheatreDTO();
 miraz.setTheatreName("Miraz");
@@ -81,29 +82,52 @@ TheatreDTO pvr = new TheatreDTO("PVR","Chikkmanguluru",6,320,300,250,"Ashique2",
 TheatreDTO cinipolis = new TheatreDTO("Cinipolis","Belgaum",4,500,490,400,"Sita Ramam","11:30 AM","Telagu",400);
 TheatreDTO sathyam = new TheatreDTO("Sathyam","Gadag",6,250,240,190,"Vikram Vedam","11:35 AM","Telagu",200);
 
-
+theatreservice.save(sathyam);
 theatreservice.save(cinipolis);
+theatreservice.save(pvr);
+theatreservice.save(esquare);
+theatreservice.save(bigcinemas);
+theatreservice.save(srs);
+theatreservice.save(mukta);
+theatreservice.save(netravati);
+theatreservice.save(victoriya);
+theatreservice.save(inox);
+theatreservice.save(santosh);
+theatreservice.save(naratki);
+theatreservice.save(chitra);
+theatreservice.save(shetty);
+theatreservice.save(miraz);
+
+theatres.add(esquare);
+theatres.add(bigcinemas);
+theatres.add(netravati);
+theatres.add(shetty);
+theatres.add(sathyam);
+theatres.add(cinipolis);
+theatres.add(pvr);
+theatres.add(srs);
+theatres.add(mukta);
+theatres.add(victoriya);
+theatres.add(inox);
+theatres.add(santosh);
+theatres.add(naratki);
+theatres.add(chitra);
+theatres.add(miraz);
 
 
-ArrayList<TheatreDTO> TheatreList = new ArrayList<TheatreDTO>();
-TheatreList.add(esquare);
-TheatreList.add(bigcinemas);
-TheatreList.add(netravati);
-TheatreList.add(shetty);
-TheatreList.add(sathyam);
-TheatreList.add(cinipolis);
-TheatreList.add(pvr);
-TheatreList.add(srs);
-TheatreList.add(mukta);
-TheatreList.add(victoriya);
-TheatreList.add(inox);
-TheatreList.add(santosh);
-TheatreList.add(naratki);
-TheatreList.add(chitra);
-TheatreList.add(miraz);
-
-System.out.println( "Deatils of chitra theatre:-" + theatreservice.findBy(chitra));
-System.out.println(theatreservice.read(cinipolis));
-
+     ArrayList<TheatreDTO> dto = theatreservice.read();
+   for (TheatreDTO theatreDTO : dto) {
+	   System.out.println(theatreDTO);	
 }
+
+
+   String th = theatreservice.findBy("Santosh");
+   for (TheatreDTO theatreDTO : dto) {
+	   if(theatreDTO.getTheatreName().equals(th))
+	   System.out.println(theatreDTO);
+	   
+}
+ 
+
+	}
 }

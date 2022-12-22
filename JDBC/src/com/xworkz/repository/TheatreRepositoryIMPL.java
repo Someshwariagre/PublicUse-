@@ -1,8 +1,10 @@
-package com.xworkz.JDBC.theatre;
+package com.xworkz.repository;
 
 import java.util.ArrayList;
+import com.xworkz.theatre.TheatreDTO;
 
-public class TheatreRepositoryIMPL implements TheatreRepository{
+public class TheatreRepositoryIMPL implements TheatreRepository {
+
 	ArrayList<TheatreDTO> theatre = new ArrayList<TheatreDTO>();
 
 	@Override
@@ -13,16 +15,13 @@ public class TheatreRepositoryIMPL implements TheatreRepository{
 	}
 
 	@Override
-	public ArrayList<TheatreDTO> read(TheatreDTO theatreDto){
+	public ArrayList<TheatreDTO> read() {
 		return theatre;
 	}
 
 	@Override
-	public ArrayList<TheatreDTO> findBy() {
-		return theatre;
+	public String findBy(String theatreName) {
+		return theatreName;
 	}
 
-	
-
-	
 }
