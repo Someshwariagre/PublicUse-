@@ -1,0 +1,61 @@
+ans 1) -> We can achieve 100% abstraction through interface.
+       -> encaplusation we can achieve from class.
+       -> Encapsulation is hiding implimantation and exposing behaviour of method.
+       -> Abstraction is 
+    
+
+ans 2) IS-A realationship is parent and child class where child class can aquire all the properties of parent class.
+       Has-A relationship is one object having onther object in class, it also called as Association 
+
+
+ans 3) Because it create Ambguity issue in program And creat diamond shape problem so java will not support Multiple Inheritance. 
+
+
+ans 7) equals() methode will check the content of object and give the result.
+       equality operator (==) will check the variable name is same or not and give the result.
+
+ans 8) By using final keyword we will create constant and all constant should be in uppercase. 
+       and by using Enum class also we can create constant.
+
+ans 9) Private:- we can only access within class.
+       Protected :- we can access within a class out side the class (it should contain parent child relationship) and  not outside the package.
+       Public :- we can access within a class outside the class and also outside the package.
+
+ans 10)Wrapper classes:-we can convert primitive data type into object type(non-primitive data type).
+       example:- int to Integer
+                 char to Character
+                 float to Float
+                 boolean to Boolean 
+
+        Two types of wrapper class 1) Boxing
+                                   2) un-boxing
+ 
+11) System.gc():- it will remove all the unwanted objects present in the system.
+    Runtime.gc():- it will check at the runtime while compliling a program whether the unused object is present or not and if it is present then it will remove unused object from program. 
+
+12) Heap memory:- object level variable stored in the heap memory.
+    Stack memory:- Class level variable stored in the Stack memory.
+
+15) use of final keyword in variable:- If you want to make any value should not change further at that time final key word is used. if you use final keyword the value of that variable is constant and you cannot change the value.
+    use of final keyword in method:- if you use final keyword in method55 you cannot override that method. 
+    use of final keyword in class:- if you want to make your class to be protected and no one can change the values than you can use final keyword to your class.
+
+   final keyword :- if you use final key word then the variable value remains constant throught program.
+   Static keyword:- Static values can be changed.  
+ 
+   final keyword :-Initialization of a variable should be done at the time of declaration only. 
+   Static keyword:- You can initialize a value wherever you want.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

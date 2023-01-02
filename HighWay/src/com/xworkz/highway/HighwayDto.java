@@ -1,5 +1,8 @@
 package com.xworkz.highway;
 
+import lombok.Getter;
+
+@Getter
 public class HighwayDto {
 	
 	private String name;
