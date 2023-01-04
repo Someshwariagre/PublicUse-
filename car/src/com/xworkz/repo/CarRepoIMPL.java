@@ -16,16 +16,13 @@ public class CarRepoIMPL implements CarRepo{
 	}
 	@Override
 	public List<CarDTO> read() {
-		System.out.println("Data is in repository and reading the data");
+		
 		return carlist;
 	}
 	@Override
 	public List<CarDTO> findByName(String name) {
-		System.out.println("data is in repository");
 		for(CarDTO list:carlist) { 
 			if(list.getBrand().equals(name)){
-				System.out.println("databse is iterating");
-				System.out.println("The data is in repo and finding by name in database");
 				System.out.println(list);
 			
 			}
@@ -36,9 +33,7 @@ public class CarRepoIMPL implements CarRepo{
 	@Override
 	public CarDTO updateColorByIndex(String colour, int index) {
 		CarDTO update=carlist.get(index);
-			System.out.println("the data has been found and updating");
 			update.setColour(colour);
-			System.out.println("the color has been updated and adding it in database");
 			carlist.set(index, update);
 			
 			return null;
@@ -49,10 +44,9 @@ public class CarRepoIMPL implements CarRepo{
 		for (int i = 0; i < carlist.size(); i++) {
 			CarDTO	c =carlist.get(i);
 		if(c.getBrand().equals(brand)) {
-			System.out.println("the brand is matched in database");
 			c.setSpeed(speed);
 			carlist.set(i, c);
-			System.out.println("The speed has been updated by brand name");
+			
 		}
 			
 		}
@@ -64,7 +58,6 @@ public class CarRepoIMPL implements CarRepo{
 			CarDTO amount=carlist.get(i);
 			if(amount.getType().equals(type)) {
 				amount.setPrice(price);
-				System.out.println("The price has been updated");
 				carlist.set(i, amount);
 			}
 			

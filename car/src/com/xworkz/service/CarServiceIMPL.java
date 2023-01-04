@@ -12,7 +12,7 @@ public class CarServiceIMPL implements CarService{
 	@Override
 	public boolean save(CarDTO dto) {
 		if(dto!=null && dto.getBrand().length()>=3) {
-			System.out.println("The data is in service");
+			
 			repo.save(dto);
 			
 		}
@@ -21,7 +21,7 @@ public class CarServiceIMPL implements CarService{
 
 	@Override
 	public List<CarDTO> read() {
-		System.out.println("The data is in service");
+		
 		return repo.read();
 	}
 
@@ -61,7 +61,6 @@ public class CarServiceIMPL implements CarService{
 
 	@Override
 	public CarDTO deleteByIndex(int index) {
-	System.out.println("data must be sent to repository for deletion");
 	repo.deleteByIndex(index);
 		return null;
 	}
