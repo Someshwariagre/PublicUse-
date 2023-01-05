@@ -49,17 +49,12 @@ public class GameServiceIMPL implements GameService {
 				repo.updatenoOfPlayerByName(name, noOfPlayers);
 				return true;
 			}
-		
-		
 		return false;
 			}
-	
-	
 
 	@Override
 	public List<GamesDTO> deletelocationByName(String location, String name) {
-		if( name!=null && location.length()>=3) {
-			System.out.println("sending the data to repository for deleting ");
+		if( name!=null) {
 			List<GamesDTO> delete1=repo.deletelocationByName(location,name);
 		}
 				return null;

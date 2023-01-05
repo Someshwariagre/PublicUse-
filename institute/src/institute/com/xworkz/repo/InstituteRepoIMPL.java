@@ -26,7 +26,9 @@ public class InstituteRepoIMPL implements InstituteRepo {
 	@Override
 	public InstituteDTO findByNameandCourse(String name, String Course) {
 		for(InstituteDTO dto:list) {
-			if(dto.getName().equalsIgnoreCase(name) && dto.getCourse().equalsIgnoreCase(Course)) {
+			if(dto.getName().equals(name) && dto.getCourse().equals(Course)) {
+				 System.out.println("finding by name and course");
+                  System.out.println(dto);
 				return dto;
 			}
 		}
@@ -39,7 +41,8 @@ public class InstituteRepoIMPL implements InstituteRepo {
 	public InstituteDTO findBylocationandrating(String location, int rating) {
 	for(InstituteDTO dto:list) {
 		if(dto.getLocation().equals(location)) {
-			if(rating>=3 && rating<=10) {
+			if(rating>=0 && rating<=10) {
+				System.out.println("data is found");
 				System.out.println(dto);
 			}
 		}
@@ -51,10 +54,9 @@ public class InstituteRepoIMPL implements InstituteRepo {
 	@Override
 	public boolean updateLocationByIndex(String location, int index) {
 		InstituteDTO dto=list.get(index);
-		dto.getLocation();
 			dto.setLocation(location);
 			list.set(index, dto);
-		
+		System.out.println("updated location by name");
 		return true ;
 	}
 
@@ -62,10 +64,11 @@ public class InstituteRepoIMPL implements InstituteRepo {
 	public boolean updateCourseByName(String course, String name) {
 		for(int i = 0;i <list.size();i++) {
 			InstituteDTO dto=list.get(i);
-			if(dto.getCourse().equals(course) && dto.getName().equals(name)) {
+			if( dto.getName().equals(name)) {
 				dto.setCourse(course);
 				dto.setName(name);
 				list.set(i, dto);
+				System.out.println("Updated course by name");
 			
 			}
 		}
@@ -75,11 +78,11 @@ public class InstituteRepoIMPL implements InstituteRepo {
 
 	@Override
 	public boolean deleteByrating(int rating) {
-		Iterator<InstituteDTO> Dto=list.iterator();
+		Iterator<InstituteDTO> Dto = list.iterator();
 		while (Dto.hasNext()) {
 			InstituteDTO dto=Dto.next();
-				list.remove(rating);
-				
+			list.remove(rating);
+				System.out.println("deleting data by Rating");
 				return true;
 			}
 		

@@ -24,23 +24,28 @@ public static void main(String args[]) {
 		
 		List<InstituteDTO> dto=service.read();
 		for (InstituteDTO instituteDTO : dto) {
-			System.out.println(dto);
+			System.out.println(instituteDTO);
 		}
 		
-		service.findByNameandCourse("xworkz", "JavaDeveloping");
-		System.out.println(dto);
-		
+		service.findByNameandCourse("XworkZ", "JavaDeveloping");
+	  
 		service.findBylocationandrating("BTM 2nd Stage", 3);
-		System.out.println(dto);
+
+		InstituteDTO update =service.updateLocationByIndex("RajajiNagar",0 );
+     	for (InstituteDTO instituteDTO : dto) {
+			System.out.println(instituteDTO);
+		}
 		
-		System.out.println(service.updateLocationByIndex("RajajiNagar",0 ));
-		System.out.println(dto);
+     	InstituteDTO update1 =service.updateCourseByName("Python", "Ethnus");
+		for (InstituteDTO instituteDTO : dto) {
+			System.out.println(instituteDTO);
+		}
+
 		
-		System.out.println(service.updateCourseByName("Python", "Ethnus"));
-		System.out.println(dto);
-		
-		service.deleteByrating(2);
-		System.out.println(dto);
+		InstituteDTO delete = service.deleteByrating(2);
+		for (InstituteDTO instituteDTO : dto) {
+			System.out.println(instituteDTO);
+		}
 		
 
 		

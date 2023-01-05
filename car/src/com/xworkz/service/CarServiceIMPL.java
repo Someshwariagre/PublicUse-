@@ -1,8 +1,11 @@
 package com.xworkz.service;
 
+
+
 import java.util.List;
 
 import com.xworkz.dto.CarDTO;
+
 import com.xworkz.repo.CarRepo;
 import com.xworkz.repo.CarRepoIMPL;
 
@@ -35,41 +38,43 @@ public class CarServiceIMPL implements CarService{
 
 	@Override
 	public CarDTO updateColorByIndex(String color, int index) {
-		if(color!=null && color.length()>=3 && index>=0) {
-			repo.updateColorByIndex(color,index);
-		}
-		return null;
+		
+			return repo.updateColorByIndex(color,index);
+		
 	}
 
 	@Override
 	public CarDTO updateSpeedByBrand(int speed, String brand) {
-		if(speed>=100 && brand!=null ) {
-			repo.updateSpeedByBrand(speed,brand);
-		}
-		return null;
+	
+			return repo.updateSpeedByBrand(speed,brand);
+		
+		
 		}
 	
 
 	@Override
 	public CarDTO updatePricedByType(int price, String type) {
-		if(price>=600000 && type!=null && type.length()>=3 ) {
-		
 		return repo.updatePricedByType(price,type);
 	}
-		return null;
-	}
+	
 
 	@Override
 	public CarDTO deleteByIndex(int index) {
-	repo.deleteByIndex(index);
-		return null;
+	return repo.deleteByIndex(index);
+		
 	}
 
 	@Override
 	public CarDTO deleteBrandByColour( String colour,String brand) {
-	 repo.deleteBrandByColour(colour,brand);
-	return null;
+		if( colour!=null) {
+			CarDTO delete1=repo.deleteBrandByColour(colour,brand);
+			System.out.println("deleted data");
+		}
+				return null;
+	}
+	
+	
 	
 	}
 
-}
+

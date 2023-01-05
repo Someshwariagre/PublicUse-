@@ -1,5 +1,6 @@
 package institute.com.xworkz.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import institute.com.xworkz.dto.InstituteDTO;
@@ -18,8 +19,6 @@ public class InstituteServiceIMPL  implements InstitueService{
 
 	@Override
 	public List<InstituteDTO> read() {
-		
-	
 		return repo.read();
 	}
 
@@ -27,12 +26,10 @@ public class InstituteServiceIMPL  implements InstitueService{
 	public InstituteDTO findByNameandCourse(String name, String Course) {
 		List<InstituteDTO> read=repo.read();
 		for(InstituteDTO dto:read) {
-		if(name!=null && name.length()>=4) {
-			
-		if(dto.getName().equalsIgnoreCase(name) && dto.getCourse().equalsIgnoreCase(Course)) {
-			
-	       
+		if(name!=null ) {
+		if(dto.getCourse().equals(Course)) {
                 return repo.findByNameandCourse(name, Course);
+               
 
 				}
 				
@@ -46,43 +43,36 @@ public class InstituteServiceIMPL  implements InstitueService{
 	
 	@Override
 	public InstituteDTO findBylocationandrating(String location, int rating) {
-	if(location!=null && location.length()>=8) {
-		if(rating>=2 && rating<=8) {
+	
+		if(rating>=0) {
 			return repo.findBylocationandrating(location, rating);
 		}
-	}
+	
 		return null;
 	}
 
 	@Override
-	public boolean updateLocationByIndex(String location, int index) {
-      if(location!= null && location.length()>=7) {
+	public InstituteDTO updateLocationByIndex(String location, int index) {
+      if(location!= null ) {
     	  repo.updateLocationByIndex(location, index);
       }
-		return true;
+		return null;
 	}
 
 	@Override
-	public boolean updateCourseByName(String course, String name) {
-		if(course !=null && course.length()>=15) {
-			if(name !=null && name.length()>=7) {
+	public InstituteDTO updateCourseByName(String course, String name) {
+			if(name !=null ) {
 				repo.updateCourseByName(course, name);
-				return true;
 			}
-		
-		}
-		return false;
-	
-
+			return null;
 	}
 
 	@Override
-	public boolean deleteByrating(int rating) {
+	public InstituteDTO deleteByrating(int rating) {
+		boolean delete=repo.deleteByrating(rating);
+		return null;
+
 	
-		repo.deleteByrating(rating);
-		
-	
-	return true;
 
 	}
 
