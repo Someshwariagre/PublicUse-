@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.xworkz.dto.CarDTO;
 
-
 public class CarRepoIMPL implements CarRepo{
 	List<CarDTO> carlist=new ArrayList<CarDTO>();
 	@Override
@@ -82,11 +81,28 @@ public class CarRepoIMPL implements CarRepo{
 		while(itr.hasNext()) {
 			CarDTO gamedto =itr.next();
 			 if(gamedto.getColour().equals(colour)) {
-				 carlist.remove(gamedto);
+				 itr.remove();
 				
 			 }
 		}
 			return null;
+	}
+	@Override
+	public boolean deleteBySpeed(int speed) {
+		Iterator<CarDTO> itr = carlist.iterator();
+		while (itr.hasNext()) {
+			CarDTO dto=itr.next();
+			if(dto.getSpeed()==speed) {
+				itr.remove();
+				System.out.println("deleting data by Speed");
+				return true;
+			}
+			
+				
+			}
+		
+		
+		return false;
 	}
 
 }

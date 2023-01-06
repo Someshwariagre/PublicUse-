@@ -32,11 +32,12 @@ public static void main(String agrs[]) {
 	    
 		
 	    List<CarDTO> dto =service.read();
-	    for (CarDTO carDTO : dto) {
-			System.out.println(carDTO);
-		}
+	   for (CarDTO carDTO : dto) {
+		System.out.println(carDTO);
+	}
 
-	  service.findByName("Audi");
+
+	  service.findByName("Nano");
 
    CarDTO car = service.updateColorByIndex("Blue", 1);
     for (CarDTO carDTO : dto) {
@@ -63,7 +64,14 @@ public static void main(String agrs[]) {
          for (CarDTO carDTO : dto) {
 	      System.out.println(carDTO);
           }
+         
+         CarDTO del1= service.deleteBySpeed(85);
+         for (CarDTO carDTO : dto) {
+        	 System.out.println(carDTO);
+			
+		}
 	
 	}
 
 }
+

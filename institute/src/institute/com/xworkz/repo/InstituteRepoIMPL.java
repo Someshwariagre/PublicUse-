@@ -78,12 +78,15 @@ public class InstituteRepoIMPL implements InstituteRepo {
 
 	@Override
 	public boolean deleteByrating(int rating) {
-		Iterator<InstituteDTO> Dto = list.iterator();
-		while (Dto.hasNext()) {
-			InstituteDTO dto=Dto.next();
-			list.remove(rating);
+		Iterator<InstituteDTO> itr = list.iterator();
+		while (itr.hasNext()) {
+			InstituteDTO dto=itr.next();
+			if(dto.getRating()==rating) {
+			itr.remove();
 				System.out.println("deleting data by Rating");
 				return true;
+			}
+				
 			}
 		
 		

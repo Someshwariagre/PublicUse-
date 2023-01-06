@@ -65,11 +65,12 @@ public class InstituteServiceIMPL  implements InstitueService{
 				repo.updateCourseByName(course, name);
 			}
 			return null;
+			
 	}
 
 	@Override
 	public InstituteDTO deleteByrating(int rating) {
-		boolean delete=repo.deleteByrating(rating);
+		repo.deleteByrating(rating);
 		return null;
 
 	

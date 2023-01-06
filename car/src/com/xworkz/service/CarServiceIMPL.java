@@ -72,6 +72,14 @@ public class CarServiceIMPL implements CarService{
 		}
 				return null;
 	}
+
+	@Override
+	public CarDTO deleteBySpeed(int speed) {
+		
+		  repo.deleteBySpeed(speed);
+		return null;
+		
+	}
 	
 	
 	

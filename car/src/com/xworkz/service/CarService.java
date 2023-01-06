@@ -20,4 +20,6 @@ public boolean save(CarDTO dto);
 	public CarDTO deleteByIndex(int index);
 	
 	public CarDTO deleteBrandByColour(String colour,String brand);
+	
+	public CarDTO deleteBySpeed(int speed);
 }

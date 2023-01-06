@@ -20,5 +20,7 @@ public interface CarRepo {
 	public CarDTO deleteByIndex(int index);
 
 	public CarDTO deleteBrandByColour(String colour,String brand);
+	
+	public boolean deleteBySpeed(int speed);
 
 }
