@@ -23,7 +23,7 @@ public class TreeRepoImpl implements TreeRepo {
 			 String query = "INSERT INTO Trees VALUES(?,?,?,?,?,?)";
 			 
 			PreparedStatement statement = connect.prepareStatement(query);
-			statement.setInt(1, 1);
+			statement.setInt(1,  );
 			statement.setString(2, "Banyan");
 			statement.setString(3, "Green");
 			statement.setString(4, "Creeper");

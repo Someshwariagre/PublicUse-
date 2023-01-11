@@ -22,7 +22,7 @@ public class TreeRunner {
 			
 			ResultSet rs = statement.executeQuery();
 			rs.next();
-			int result =rs.getInt(1);
+//			rs.getInt);
 			System.out.println(result);
    		   
 //			System.out.println(id);
