@@ -1,12 +1,14 @@
-package com.xworkz.watch.util;
+package com.xworkz.dress.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.xworkz.watch.constants.SqlCredentials;
+import com.xworkz.dress.constants.SqlCredentials;
 
-public class DBUtil {
+
+
+public class DBUtils {
 public static Connection getConnection() {
 		
 		

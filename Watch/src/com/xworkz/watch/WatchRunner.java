@@ -12,7 +12,7 @@ public class WatchRunner {
 	public static void main(String[] args) {
 		WatchService service = new WatchServiceImpl();
 		
-		
+		List<WatchDto> list = new ArrayList<WatchDto>();
 		WatchDto dto2 = new WatchDto(2, "Titan", "golden", "Digital", 2000);
 		WatchDto dto3 = new WatchDto(3, "Sonata", "Black", "Analog", 3900);
 		WatchDto dto4 = new WatchDto(4, "Fastrack", "Silver", "Wrist watch", 4500);
@@ -35,6 +35,11 @@ public class WatchRunner {
 //		service.save(dto2);
 //		service.save(dto11);
 		
+
+      
+	    
+		
+		
 		
 	   
 		List<WatchDto> dto= service.read();
@@ -56,3 +61,4 @@ public class WatchRunner {
 	}
 
 }
+

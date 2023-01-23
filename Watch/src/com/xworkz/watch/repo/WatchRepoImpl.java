@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.xworkz.watch.dto.WatchDto;
@@ -15,23 +16,28 @@ public class WatchRepoImpl implements WatchRepo {
 
 	@Override
 	public WatchDto save(WatchDto dto) {
-
-		String query = "INSERT INTO watch_details values(?,?,?,?,?)";
+		List<WatchDto> list = new ArrayList<WatchDto>();
+		String query = "INSERT INTO dress_detail values(?,?,?,?,?)";
 		try (Connection connection = DBUtil.getConnection();
 				PreparedStatement statement = connection.prepareStatement(query);) {
+			for (Iterator<WatchDto> itr = list.iterator(); itr.hasNext();) {
+				WatchDto dto1 = itr.next();
 
-			statement.setInt(1, dto.getId());
-			statement.setString(2, dto.getBrandName());
-			statement.setString(3, dto.getColour());
-			statement.setString(4, dto.getType());
-			statement.setInt(5, dto.getPrice());
+				statement.setInt(1, dto.getId());
+				statement.setString(2, dto.getBrandName());
+				statement.setString(3, dto.getColour());
+				statement.setString(4, dto.getType());
+				statement.setInt(5, dto.getPrice());
 
-			statement.executeUpdate();
+				statement.addBatch();
+				statement.executeUpdate();
+			}
+			
 
 		}
 
 		catch (SQLException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -61,7 +67,7 @@ public class WatchRepoImpl implements WatchRepo {
 		}
 
 		catch (SQLException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -119,7 +125,7 @@ public class WatchRepoImpl implements WatchRepo {
 			return dto;
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -141,7 +147,7 @@ public class WatchRepoImpl implements WatchRepo {
 		}
 
 		catch (SQLException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
