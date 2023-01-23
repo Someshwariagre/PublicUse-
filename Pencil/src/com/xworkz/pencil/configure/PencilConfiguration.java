@@ -28,7 +28,7 @@ public class PencilConfiguration {
 			properties.put(Environment.DIALECT, "org.hibernet.dialect.MySQL5Dialect");
 			properties.put(Environment.SHOW_SQL, true);
 			properties.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-			properties.put(Environment.HBM2DDL_AUTO, "drop-table");
+			properties.put(Environment.HBM2DDL_AUTO, "creat-drop");
 			
 			
 			config.setProperties(properties);
