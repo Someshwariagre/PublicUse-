@@ -1,6 +1,7 @@
 package com.xworkz.pencil.dto;
 
 import javax.persistence.Entity;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "PencilDto")
+@Table(name = "pencil")
 
 
 public class PencilDto {
