@@ -50,7 +50,7 @@ public class CakeRepoImpl implements CakeRepo {
 		find.setName(name);
 		entityManager.merge(find);
 		entityManager.getTransaction().commit();
-		return false;
+		return true;
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class CakeRepoImpl implements CakeRepo {
 		CakeDto find = entityManager.find(CakeDto.class, id);
 		entityManager.remove(find);
 		entityManager.getTransaction().commit();
-		return false;
+		return true;
 	}
 
 }
