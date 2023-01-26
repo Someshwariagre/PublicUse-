@@ -39,7 +39,7 @@ public class CakeServiceImpl implements CakeService{
 	public boolean updateNameById(String name, int id) {
 		if(id>0) {
 			System.out.println("Data is valid");
-			return true;
+			return repo.updateNameById(name, id);
 		}
 		return false;
 	}
@@ -48,7 +48,7 @@ public class CakeServiceImpl implements CakeService{
 	public boolean DeleteById(int id) {
 		if(id>0) {
 			System.out.println("data is valid");
-			return true;
+			return repo.DeleteById(id);
 		}
 		return false;
 	}
