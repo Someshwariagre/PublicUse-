@@ -9,7 +9,7 @@ public interface CakeRepo {
 	public boolean save(CakeDto dto);
 	public CakeDto findById(int id);
 	public List<CakeDto> readAll();
-	public boolean updateByName(String name);
+	public boolean updateNameById( String name,int id);
 	public boolean DeleteById(int id);
 	
 

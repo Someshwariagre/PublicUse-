@@ -36,8 +36,8 @@ public class CakeServiceImpl implements CakeService{
 	}
 
 	@Override
-	public boolean updateByName(String name) {
-		if(name.length()>=2) {
+	public boolean updateNameById(String name, int id) {
+		if(id>0) {
 			System.out.println("Data is valid");
 			return true;
 		}

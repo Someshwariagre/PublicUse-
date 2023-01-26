@@ -24,7 +24,7 @@ public class CakeTester {
 		
 //		System.out.println(service.findById(3));
 		
-		System.out.println(service.updateByName("Red valvet"));
+		System.out.println(service.updateNameById("Red Valvet",3));
 		
 		service.DeleteById(5);
 		

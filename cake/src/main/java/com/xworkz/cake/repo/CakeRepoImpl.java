@@ -44,9 +44,9 @@ public class CakeRepoImpl implements CakeRepo {
 	}
 
 	@Override
-	public boolean updateByName(String name) {
+	public boolean updateNameById( String name ,int id) {
 		entityManager.getTransaction().begin();
-		CakeDto find = entityManager.find(CakeDto.class, name);
+		CakeDto find = entityManager.find(CakeDto.class, id);
 		find.setName(name);
 		entityManager.merge(find);
 		entityManager.getTransaction().commit();

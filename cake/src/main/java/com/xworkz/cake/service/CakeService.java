@@ -9,7 +9,8 @@ public interface CakeService {
 	public boolean save(CakeDto dto);
 	public CakeDto findById(int id);
 	public List<CakeDto> readAll();
-	public boolean updateByName(String name);
+	
 	public boolean DeleteById(int id);
+	public boolean updateNameById(String name, int id);
 
 }
