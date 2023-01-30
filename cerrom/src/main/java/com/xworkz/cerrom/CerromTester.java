@@ -6,8 +6,6 @@ import main.java.com.xworkz.cerrom.service.CerromServiceImpl;
 
 public class CerromTester {
 	public static void main(String[] args) {
-		
-	
 	
 	CerromService service = new CerromServiceImpl();
 	
