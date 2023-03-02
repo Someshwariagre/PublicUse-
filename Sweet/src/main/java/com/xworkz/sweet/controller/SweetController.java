@@ -10,8 +10,8 @@ public class SweetController {
 	public SweetController() {
 		System.out.println("Sweet controller is started");
 	}
-	@RequestMapping("/success")
+	@RequestMapping("/signup")
 	public String save() {
-	  return "success.jsp";
+	  return "signup.jsp";
   }
 }
