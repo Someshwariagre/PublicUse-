@@ -1,4 +1,4 @@
-package com.xworkz.fruit.config;
+package com.xworkz.road.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -6,19 +6,19 @@ public class FrontControllerConfig extends AbstractAnnotationConfigDispatcherSer
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		System.out.println("running in getrootconfig");
+
 		return new Class[] { BeanConfig.class };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-
-		return null;
+		// TODO Auto-generated method stub
+		return new Class[] { BeanConfig.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		System.out.println("running in servaletMapping");
+
 		return new String[] { "/" };
 	}
 
