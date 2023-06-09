@@ -8,8 +8,6 @@ import java.sql.ResultSet;
 import com.xworkz.bag.SqlCredintials;
 import com.xworkz.bag.dto.BagDto;
 
-
-
 public class BagRepoImpl implements BagRepo {
 	@Override
 	public boolean save(BagDto dto) {
@@ -93,7 +91,7 @@ public class BagRepoImpl implements BagRepo {
 			
 			 String query = "select * from bag_details where brandname=?";
 			 
-			PreparedStatement statement =connect.prepareStatement(query);
+			PreparedStatement statement = connect.prepareStatement(query);
 			statement.setString(1, name);
 			ResultSet rs = statement.executeQuery();
 			

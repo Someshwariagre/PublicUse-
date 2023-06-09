@@ -36,9 +36,7 @@ VoterService service = new VoterServiceImpl();
 			writer.print("<td> ");
 			writer.print(hospitalDto.getLocation());
 			writer.print("</td>");
-			
-			
-			
+			 
 		}
 		
 		writer.print("</form>" );

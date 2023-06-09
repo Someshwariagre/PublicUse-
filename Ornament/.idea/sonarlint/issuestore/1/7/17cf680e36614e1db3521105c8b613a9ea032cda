@@ -1,0 +1,7 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ÿ½ûúÿÿÿÿ
+M	java:S106'"9Replace this use of System.out or System.err by a logger.(Á¿æC
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(Ÿ½ûúÿÿÿÿ
+k
+java:S1128
+"PRemove this unused import 'main.java.com.xworkz.ornament.repo.OrnamentRepoImpl'.(à€¥øÿÿÿÿ
